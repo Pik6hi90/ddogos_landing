@@ -1,0 +1,67 @@
+/* Reset de márgenes por defecto */
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    padding: 100px;
+    max-width: 700px;
+}
+
+#logo_nav {
+  height: 60px;      /* altura fija para que sea uniforme */
+  width: auto;       /* ancho automático para mantener proporción */
+  display: block;    /* elimina espacio extra abajo */
+  margin-right: 20px; /* separación entre logo y enlaces */
+  vertical-align: middle; /* alinea verticalmente con texto */
+}
+
+
+#navigation {
+  display: flex;
+  align-items: center;      /* Alinea verticalmente logo y enlaces */
+  padding: 10px 20px;
+  background-color: #f5f5f5; /* Color de fondo suave */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  font-family: Arial, sans-serif;
+  position: fixed;
+  width: 100%;
+  
+}
+
+#logo_nav {
+  height: 60px;
+  width: auto;
+  margin-right: 30px;       /* Espacio entre logo y enlaces */
+}
+
+#navigation a {
+  margin-right: 20px;       /* Espacio entre enlaces */
+  text-decoration: none;    /* Sin subrayado */
+  color: #333;              /* Color texto */
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+#navigation a:last-child {
+  margin-right: 0;          /* Quita margen al último enlace */
+}
+
+#navigation a:hover {
+  color: #007BFF;           /* Color azul al pasar el mouse */
+}
+
+#ubicacion{
+    padding: 50px;
+    background-color: rgb(255, 7, 7);
+    width: 100%;
+    align-content: last baseline;
+    align-items: right;
+}
