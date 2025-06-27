@@ -1,66 +1,131 @@
 /* Reset de márgenes por defecto */
 body {
-    margin: 0;
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-}
-
-
-#logo {
-    display: block;
-    margin: 0 auto;
-    padding: 5%;
-    max-width: 575px;
-}
-
-#logo_nav {
-  height: 60px;      /* altura fija para que sea uniforme */
-  width: auto;       /* ancho automático para mantener proporción */
-  display: block;    /* elimina espacio extra abajo */
-  margin-right: 20px; /* separación entre logo y enlaces */
-  vertical-align: middle; /* alinea verticalmente con texto */
-}
-
-
-#navigation {
-  display: flex;
-  align-items: center;      /* Alinea verticalmente logo y enlaces */
-  padding: 10px 20px;
-  background-color: #f5f5f5; /* Color de fondo suave */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  margin: 0;
+  background-color: rgb(255, 255, 255);
   font-family: Arial, sans-serif;
-  width: 100%;
-  
 }
 
+/* Logo principal */
+#logo {
+  display: block;
+  margin: 0 auto;
+  padding: 5%;
+  max-width: 575px;
+  width: 100%;
+  height: auto;
+}
+
+/* Logo en navegación */
 #logo_nav {
   height: 60px;
   width: auto;
-  margin-right: 30px;       /* Espacio entre logo y enlaces */
+  display: block;
+  margin-right: 20px;
+  vertical-align: middle;
 }
 
+/* Navegación */
+#navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Enlaces de navegación */
 #navigation a {
-  margin-right: 20px;       /* Espacio entre enlaces */
-  text-decoration: none;    /* Sin subrayado */
-  color: #333;              /* Color texto */
+  margin: 5px 15px;
+  text-decoration: none;
+  color: #333;
   font-weight: 600;
   font-size: 16px;
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
-#navigation a:last-child {
-  margin-right: 0;          /* Quita margen al último enlace */
-}
-
 #navigation a:hover {
-  color: #007BFF;           /* Color azul al pasar el mouse */
+  color: #007BFF;
 }
 
-#ubicacion{
-    padding: 25px;
-    background-color: rgb(255, 7, 7);
-    width: 100%;
-    align-content: last baseline;
-    align-items: right;
+/* Sección ubicación */
+#ubicacion {
+  padding: 25px;
+  background-color: rgb(255, 7, 7);
+  width: 100%;
+  text-align: center;
+}
+
+#ubicacion iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 350px;
+  border: none;
+  margin-top: 20px;
+}
+
+/* Contenido principal debajo de la navegación */
+main {
+  padding-top: 100px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+
+/* =====================
+   Media Queries
+   ===================== */
+
+/* Tablets y móviles medianos */
+@media (max-width: 768px) {
+  #navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navigation a {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+
+  #logo_nav {
+    margin-bottom: 10px;
+  }
+
+  #ubicacion iframe {
+    height: 300px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  #navigation {
+    align-items: center;
+  }
+
+  #navigation a {
+    font-size: 14px;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  #ubicacion iframe {
+    height: 250px;
+  }
 }
